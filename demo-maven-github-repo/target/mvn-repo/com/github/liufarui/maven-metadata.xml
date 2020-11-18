@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>demo-maven-github-repo Maven Mojo</name>
+      <prefix>demogithub-repo</prefix>
+      <artifactId>demo-maven-github-repo</artifactId>
+    </plugin>
+  </plugins>
+</metadata>

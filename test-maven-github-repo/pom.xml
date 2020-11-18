@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.liufarui</groupId>
+    <artifactId>test-maven-github-repo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>mvn-repo</id>
+            <!-- https://raw.github.com/用户名/仓库名/分支名 -->
+            <url>https://raw.github.com/liufarui/mvn-repo/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.liufarui</groupId>
+            <artifactId>demo-maven-github-repo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.liufarui</groupId>
+                <artifactId>demo-maven-github-repo</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
