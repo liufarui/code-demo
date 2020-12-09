@@ -15,22 +15,28 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2020/11/30 下午3:53
  */
 @Controller
-@RequestMapping(value = "hello")
+@RequestMapping(value = "/hello")
+@CrossOrigin(origins = "*")
 public class HelloController {
-    @RequestMapping(method= RequestMethod.GET)
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(method = RequestMethod.GET)
+    @ResponseBody
+    @CrossOrigin(origins = "*")
+    public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
 
-        //创建ModelAndView对象
-        ModelAndView mav = new ModelAndView();
-        //向模型对象中添加数据
-        mav.addObject("msg","我是酷酷的猿！");
-        //设置逻辑视图名
-        mav.setViewName("/WEB-INF/jsp/hello.jsp");
-        //返回ModelAndView对象
-        return mav;
+//        //创建ModelAndView对象
+//        ModelAndView mav = new ModelAndView();
+//        //向模型对象中添加数据
+//        mav.addObject("msg","我是酷酷的猿！");
+//        //设置逻辑视图名
+//        mav.setViewName("/WEB-INF/jsp/hello.jsp");
+//        //返回ModelAndView对象
+//        return mav;
+        return "HAHA";
     }
 
-    @RequestMapping(value = "/hello", method= RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    @ResponseBody
+    @CrossOrigin(origins = "*")
     public String hello(HttpServletRequest request, HttpServletResponse response) {
         return "Hello, World";
     }
