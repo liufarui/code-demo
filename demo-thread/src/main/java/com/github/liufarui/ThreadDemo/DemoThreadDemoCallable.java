@@ -20,6 +20,8 @@ public class DemoThreadDemoCallable implements Callable<Integer> {
                 100, MILLISECONDS, new ArrayBlockingQueue<Runnable>(5));
         Future<Integer> future = tpe.submit(new DemoThreadDemoCallable());
 
+        future.get();
+
         List<FutureTask<Integer>> taskList = new ArrayList<FutureTask<Integer>>();
 
         for (int i = 0; i < 3; i++) {
