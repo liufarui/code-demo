@@ -1,10 +1,10 @@
 package com.github.liufarui.springboot.controller;
 
+import com.github.liufarui.springboot.model.ValidationModel;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -17,8 +17,13 @@ import javax.validation.constraints.NotBlank;
 @Validated
 public class ValidationController {
 
-    @GetMapping("/bbb")
-    public void bbb(@NotBlank(message="examId不能为空") String xxx) {
-        System.out.println("asdada");;
+    @GetMapping("/get")
+    public void get(@NotBlank(message="examId不能为空") String xxx) {
+        System.out.println("!!!!!!!!!!!!");
+    }
+
+    @PostMapping("/post")
+    public void post(@Valid @RequestBody ValidationModel model) {
+        System.out.println("!!!!!!!!!!!!");
     }
 }
