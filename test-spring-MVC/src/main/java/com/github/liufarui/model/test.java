@@ -1,16 +1,15 @@
 package com.github.liufarui.model;
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.*;
+
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
+import java.util.Set;
 
-import static java.time.Instant.ofEpochMilli;
-import static java.time.ZoneOffset.UTC;
-import static java.time.ZonedDateTime.ofInstant;
 import static org.apache.commons.codec.digest.DigestUtils.md5Hex;
 
 /**
@@ -50,6 +49,7 @@ public class test {
         sb.append("]");
 
         System.out.println(md5Hex(sb.toString()));
+        System.out.println(jsonStr2Map(JSONObject.parseObject("{\"value\":\"222222\", \"value1\":\"\",\"value2\":\"\"}")));
     }
 
     public static String signBaichuan(String appKey, String appSecret, Long timestamp) {
@@ -68,5 +68,17 @@ public class test {
             sb.append(arg);
         }
         return md5Hex(sb.toString());
+    }
+
+    public static HashMap jsonStr2Map(String jOStr) {
+        HashMap data = new HashMap();
+        JSONObject jO = JSONObject.parseObject(jOStr);
+        Set keys = jO.keySet();
+        // 遍历jsonObject数据，添加到Map对象
+        for (Object key : keys) {
+            String value = (String) jO.get(key);
+            data.put(key, value);
+        }
+        return data;
     }
 }
