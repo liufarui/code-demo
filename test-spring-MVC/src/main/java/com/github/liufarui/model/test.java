@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import java.util.*;
 
+import com.sun.tools.javac.util.StringUtils;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -49,7 +50,7 @@ public class test {
         sb.append("]");
 
         System.out.println(md5Hex(sb.toString()));
-        System.out.println(jsonStr2Map(JSONObject.parseObject("{\"value\":\"222222\", \"value1\":\"\",\"value2\":\"\"}")));
+//        System.out.println(jsonStr2Map(JSONObject.parseObject("{\"value\":\"222222\", \"value1\":\"\",\"value2\":\"\"}")));
     }
 
     public static String signBaichuan(String appKey, String appSecret, Long timestamp) {
@@ -80,5 +81,45 @@ public class test {
             data.put(key, value);
         }
         return data;
+    }
+
+    @Test
+    public void test3() {
+        System.out.println(getProductInfo("{\"serviceCode\":\"SVC-INSURE\",\"serviceValue\":\"{\\\"value\\\":\\\"222222\\\", \\\"value1\\\":\\\"\\\",\\\"value2\\\":\\\"\\\"}\"}"));
+    }
+
+    public static HashMap getProductInfo(Map serviceMap) {
+        HashMap data = new HashMap();
+        String serviceCode = (String) serviceMap.get("serviceCode");
+        String productNo;
+        HashMap<String, String> productAttrs = new HashMap<>();
+        if ("SVC-INSURE".equals(serviceCode)) {
+            productNo = "ed-a-0002";
+            productAttrs.put("guaranteeMoney", (String) jsonStr2Map((String) serviceMap.get("serviceValue")).get("value"));
+        } else if ("SVC-COD".equals(serviceCode)) {
+            productNo = "ed-a-0009";
+            productAttrs.put("shouldPayMoney", (String) jsonStr2Map((String) serviceMap.get("serviceValue")).get("value"));
+        }
+        data.put("productNo", productNo);
+        data.put("productAttrs", productAttrs);
+        return data;
+    }
+
+    public static int getProductType(Map serviceMap) {
+        String serviceValue = (String) jsonStr2Map((String) serviceMap.get("serviceValue")).get("value");
+        if (null == serviceValue) {
+            return serviceValue;
+        } else switch (serviceValue) {
+            case "2":
+                return "usual";
+            case "7":
+                return "cold";
+            case "8":
+                return "freezing";
+            case "9":
+                return "deepCool";
+            default:
+                return serviceValue;
+        }
     }
 }
