@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd0c94e5-f89e-4252-bc3c-501310f43098" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../test-spring-MVC/.idea/test-spring-MVC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/src/main/java/com/github/liufarui/controller/AmisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/src/main/java/com/github/liufarui/controller/AmisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/src/main/java/com/github/liufarui/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/src/main/java/com/github/liufarui/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/target/test-spring-MVC/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/target/test-spring-MVC/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-spring-MVC/target/test-spring-MVC/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../test-spring-MVC/target/test-spring-MVC/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/funcTest.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/funcTest1.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +51,44 @@
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/base" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/base" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd0c94e5-f89e-4252-bc3c-501310f43098" name="Default Changelist" comment="" />
+      <created>1612942171870</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612942171870</updated>
+      <workItem from="1612942173035" duration="420000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
