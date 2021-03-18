@@ -1,10 +1,8 @@
 package com.github.liufarui.controller;
 
+import com.github.liufarui.model.ModelT;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -39,5 +37,10 @@ public class HelloController {
     @CrossOrigin(origins = "*")
     public String hello(HttpServletRequest request, HttpServletResponse response) {
         return "Hello, World";
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.POST)
+    public String post(@ModelAttribute ModelT t) {
+        return "Hello World" + t.getAaa();
     }
 }
