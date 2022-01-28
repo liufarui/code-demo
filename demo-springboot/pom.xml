@@ -3,24 +3,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.github.liufarui</groupId>
+        <artifactId>code-demo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.github.liufarui</groupId>
-    <artifactId>springboot</artifactId>
+    <artifactId>demo-springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java-version>15</java-version>
         <!-- 下面这两个版本很重要，要对应上 -->
         <spring-version>5.3.3</spring-version>
         <spring-boot-version>2.4.2</spring-boot-version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,7 +36,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-<!--                <version>${spring-boot-version}</version>-->
                 <configuration>
                     <mainClass>com.github.liufarui.springboot.SpringbootApplication</mainClass>
                 </configuration>
@@ -48,8 +44,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>${java-version}</source>
-                    <target>${java-version}</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
         </plugins>

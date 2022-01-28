@@ -1,3 +1,9 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
 # Windows:
 Thumbs.db
 ehthumbs.db
@@ -6,11 +12,37 @@ Desktop.ini
 # Mac:
 .DS_Store
 
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
+*.ipr
 *.class
 .svn/
-.idea/*
-demo-go/.idea/*
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -30,11 +62,6 @@ hs_err_pid*
 *.egg-info
 dist
 build
-target/
-.idea
-.classpath
-.project
-.settings
 .out/
 
 *bak__

@@ -1,0 +1,1 @@
+INSERT INTO table_test(id,name) value(1,'字典');
