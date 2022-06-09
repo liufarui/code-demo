@@ -1,0 +1,10 @@
+<Loggers>
+    <AsyncLogger name="JDLTransactionEvenLogger" level="INFO">
+        <AppenderRef ref="Kafka_lopTxHook"/>
+    </AsyncLogger>
+
+    <Root level="${LOG_LEVEL}">
+<!--        <AppenderRef ref="Console"/>-->
+<!--        <AppenderRef ref="asyncRollingFile"/>-->
+    </Root>
+</Loggers>

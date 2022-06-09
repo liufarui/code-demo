@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <properties>
+        <property name="LOG_HOME">/export/Logs/lop/lop-open</property>
+        <property name="FILE_NAME">lop-open</property>
+        <property name="LOG_LEVEL">info</property>
+        <!--Dynamic-->
+        <property name="KAFKA_SERVERS">test-nameserver.jmq.jd.local:50088</property>
+        <property name="CLIENT_ID">RunnerSmartlog</property>
+        <property name="KAFKA_TOPIC_TX">lop_tx_hooks</property>
+    </properties>
+
+    <xi:include href="log4j/log4j2_appender.xml"/>
+    <xi:include href="log4j/log4j2_logger.xml"/>
+</Configuration>
