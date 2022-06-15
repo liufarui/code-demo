@@ -1,0 +1,30 @@
+env: dev
+
+spring:
+  profiles:
+    active: ${env}
+  config:
+    import:
+      - classpath:/flow-${env}.properties
+      - classpath:/important-${env}.properties
+person:
+  name: liufarui
+  age: 26
+  sex: boy
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8085
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8086
+
