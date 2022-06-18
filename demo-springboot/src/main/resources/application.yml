@@ -1,12 +1,10 @@
-env: dev
-
 spring:
   profiles:
     active: ${env}
   config:
     import:
-      - classpath:/flow-${env}.properties
-      - classpath:/important-${env}.properties
+      - classpath:/prop/flow-${env}.properties
+      - classpath:/prop/important-${env}.properties
 person:
   name: liufarui
   age: 26
