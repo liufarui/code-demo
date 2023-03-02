@@ -16,6 +16,7 @@
         <module>demo-spring-mvc</module>
         <module>demo-redis</module>
         <module>demo-log4j-kafka</module>
+        <module>demo-limit-leakyBarrel</module>
     </modules>
 
     <groupId>com.github.liufarui</groupId>
@@ -34,6 +35,7 @@
         <spring-version>5.3.3</spring-version>
         <spring-boot-version>2.4.2</spring-boot-version>
         <disruptor.version>3.4.4</disruptor.version>
+        <junit-jupiter.version>5.9.2</junit-jupiter.version>
     </properties>
 
     <dependencyManagement>
@@ -176,6 +178,13 @@
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
                 <version>${disruptor.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
