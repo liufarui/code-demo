@@ -17,6 +17,7 @@
         <module>demo-redis</module>
         <module>demo-log4j-kafka</module>
         <module>demo-limit-leakyBarrel</module>
+        <module>demo-sentinel</module>
     </modules>
 
     <groupId>com.github.liufarui</groupId>

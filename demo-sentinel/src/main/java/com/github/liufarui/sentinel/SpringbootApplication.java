@@ -1,0 +1,20 @@
+package com.github.liufarui.sentinel;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author liufarui
+ */
+@SpringBootApplication
+public class SpringbootApplication implements CommandLineRunner {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("succcess");
+    }
+}

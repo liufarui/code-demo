@@ -1,4 +1,4 @@
-package com.github.liufarui.controller;
+package com.github.liufarui.sentinel.controller;
 
 import com.github.liufarui.model.BeanTT;
 import com.github.liufarui.model.ModelT;
